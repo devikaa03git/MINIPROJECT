@@ -2,19 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:see_v/home_page.dart';
 
 void main() {
-  runApp(SignupPage());
+  runApp(const SignupPage());
 }
 
 class SignupPage extends StatelessWidget {
+  const SignupPage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: SignUpPage(),
     );
   }
 }
 
 class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +28,7 @@ class SignUpPage extends StatelessWidget {
           Container(
             width: MediaQuery.of(context).size.width / 2,
             color: Colors.blue,
-            child: Center(
+            child: const Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -51,93 +55,94 @@ class SignUpPage extends StatelessWidget {
           // Right half with text fields and sign-up button
           Container(
             width: MediaQuery.of(context).size.width / 2,
-            padding: EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(20.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'Sign Up',
                     style: TextStyle(
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 20.0),
+                  const SizedBox(height: 20.0),
                   // First Name
-                  TextField(
+                  const TextField(
                     decoration: InputDecoration(
                       labelText: 'First Name',
                     ),
                   ),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
                   // Middle Name (Optional)
-                  TextField(
+                  const TextField(
                     decoration: InputDecoration(
                       labelText: 'Middle Name (Optional)',
                     ),
                   ),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
                   // Last Name
-                  TextField(
+                  const TextField(
                     decoration: InputDecoration(
                       labelText: 'Last Name',
                     ),
                   ),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
                   // Email (Username)
-                  TextField(
+                  const TextField(
                     decoration: InputDecoration(
                       labelText: 'Email (Username)',
                     ),
                   ),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
                   // Phone
-                  TextField(
+                  const TextField(
                     decoration: InputDecoration(
                       labelText: 'Phone',
                     ),
                   ),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
                   // Date of Birth
-                  TextField(
+                  const TextField(
                     decoration: InputDecoration(
                       labelText: 'Date of Birth',
                     ),
                   ),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
                   // Gender
-                  TextField(
+                  const TextField(
                     decoration: InputDecoration(
                       labelText: 'Gender',
                     ),
                   ),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
                   // Password
-                  TextField(
+                  const TextField(
                     obscureText: true,
                     decoration: InputDecoration(
                       labelText: 'Password',
                     ),
                   ),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
                   // Confirm Password
-                  TextField(
+                  const TextField(
                     obscureText: true,
                     decoration: InputDecoration(
                       labelText: 'Confirm Password',
                     ),
                   ),
-                  SizedBox(height: 20.0),
+                  const SizedBox(height: 20.0),
                   ElevatedButton(
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()),
                       );
                     },
-                    child: Text('Sign Up'),
+                    child: const Text('Sign Up'),
                   ),
                 ],
               ),

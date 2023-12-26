@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
         color: Colors.white, // Set the background color to white
         child: Center(
           child: Image.asset(
-            "assets/logofinal.png",
+            'assets/logofinal.png',
             fit: BoxFit.cover, // Make the image cover the whole screen
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,

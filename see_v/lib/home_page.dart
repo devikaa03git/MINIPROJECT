@@ -2,22 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:see_v/update_info.dart'; // Import your UpdateInfoPage file
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: HomePage(),
     );
   }
 }
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: null,
@@ -27,7 +30,7 @@ class HomePage extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            UserAccountsDrawerHeader(
+            const UserAccountsDrawerHeader(
               accountName: Text('Your Name'),
               accountEmail: Text('youremail@example.com'),
               currentAccountPicture: CircleAvatar(
@@ -39,40 +42,40 @@ class HomePage extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Home'),
+              leading: const Icon(Icons.home),
+              title: const Text('Home'),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.update),
-              title: Text('Update'),
+              leading: const Icon(Icons.update),
+              title: const Text('Update'),
               onTap: () {
                 // Navigate to UpdateInfoPage
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => UpdateInfo()),
+                  MaterialPageRoute(builder: (context) => const UpdateInfo()),
                 );
               },
             ),
             ListTile(
-              leading: Icon(Icons.person),
-              title: Text('My CV'),
+              leading: const Icon(Icons.person),
+              title: const Text('My CV'),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.link),
-              title: Text('LinkedIn'),
+              leading: const Icon(Icons.link),
+              title: const Text('LinkedIn'),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.article),
-              title: Text('Blogs'),
+              leading: const Icon(Icons.article),
+              title: const Text('Blogs'),
               onTap: () {},
             ),
-            Divider(),
+            const Divider(),
             ListTile(
-              leading: Icon(Icons.exit_to_app),
-              title: Text('Log Out'),
+              leading: const Icon(Icons.exit_to_app),
+              title: const Text('Log Out'),
               onTap: () {},
             ),
           ],
@@ -86,7 +89,7 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Left side with welcome text
-              Expanded(
+              const Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -124,14 +127,15 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(width: 20.0), // Add space between the text and images
+              const SizedBox(
+                  width: 20.0), // Add space between the text and images
               // Right side with images
               Align(
                 alignment: Alignment.centerRight,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 800.0, // Adjust the width as needed
                       child: Image.asset(
                         'assets/homeimage.png',

@@ -48,7 +48,7 @@ class _InstaLoginState extends State<Login> {
           height: 50,
           child: TextField(
             decoration: InputDecoration(
-              hintText: "Email",
+              hintText: 'Email',
               border: OutlineInputBorder(
                 borderSide: Divider.createBorderSide(context),
               ),
@@ -72,7 +72,7 @@ class _InstaLoginState extends State<Login> {
           height: 50,
           child: TextField(
             decoration: InputDecoration(
-              hintText: "Password",
+              hintText: 'Password',
               border: OutlineInputBorder(
                 borderSide: Divider.createBorderSide(context),
               ),
@@ -90,7 +90,7 @@ class _InstaLoginState extends State<Login> {
           ),
         ),
         const SizedBox(height: 24),
-        Container(
+        SizedBox(
           width: 200,
           height: 48,
           child: SizedBox(
@@ -99,43 +99,40 @@ class _InstaLoginState extends State<Login> {
             child: ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => HomePage()),
+                  MaterialPageRoute(builder: (context) => const HomePage()),
                 );
               },
-              child: const Text("Log in"),
+              child: const Text('Log in'),
             ),
           ),
         ),
         const SizedBox(height: 24),
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             Text(
-              "Forgot your login details?",
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),
+              'Forgot your login details?',
+              style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),
             ),
             Text(
-              " Get help logging in",
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
+              ' Get help logging in',
+              style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
             ),
           ],
         ),
         const SizedBox(height: 24),
-        Row(
-          children: const [
+        const Row(
+          children: [
             Flexible(child: Divider(thickness: 2)),
             Text(
-              " OR ",
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),
+              ' OR ',
+              style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),
             ),
             Flexible(child: Divider(thickness: 2)),
           ],
         ),
         const SizedBox(height: 24),
-        Container(
+        SizedBox(
           width: 200,
           height: 48,
           child: ElevatedButton(
@@ -143,10 +140,10 @@ class _InstaLoginState extends State<Login> {
               // Navigate to the signup page
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => SignupPage()),
+                MaterialPageRoute(builder: (context) => const SignupPage()),
               );
             },
-            child: const Text("Try Now"),
+            child: const Text('Try Now'),
           ),
         ),
       ],
@@ -162,10 +159,10 @@ class _InstaLoginState extends State<Login> {
             // Navigate to the signup page
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => SignupPage()),
+              MaterialPageRoute(builder: (context) => const SignupPage()),
             );
           },
-          child: Text(
+          child: const Text(
             "Don't have an account?",
             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),
           ),
@@ -175,11 +172,11 @@ class _InstaLoginState extends State<Login> {
             // Navigate to the signup page
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => SignupPage()),
+              MaterialPageRoute(builder: (context) => const SignupPage()),
             );
           },
-          child: Text(
-            " Sign up",
+          child: const Text(
+            ' Sign up',
             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
           ),
         ),

@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:see_v/home_page.dart';
 import 'package:see_v/update_info1.dart';
 
 void main() {
-  runApp(UpdateInfo());
+  runApp(const UpdateInfo());
 }
 
 class UpdateInfo extends StatelessWidget {
+  const UpdateInfo({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: UpdateInfoPage(),
     );
   }
 }
 
 class UpdateInfoPage extends StatefulWidget {
+  const UpdateInfoPage({super.key});
+
   @override
   _UpdateInfoPageState createState() => _UpdateInfoPageState();
 }
@@ -27,7 +30,7 @@ class _UpdateInfoPageState extends State<UpdateInfoPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Update Info'),
+        title: const Text('Update Info'),
         backgroundColor: Colors.lightBlue,
       ),
       body: SingleChildScrollView(
@@ -36,7 +39,7 @@ class _UpdateInfoPageState extends State<UpdateInfoPage> {
             Container(
               width: 500,
               color: Colors.black,
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -54,14 +57,14 @@ class _UpdateInfoPageState extends State<UpdateInfoPage> {
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   children: [
-                    Text(
+                    const Text(
                       'SKILLS:',
                       style: TextStyle(
                         fontSize: 18.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 10.0),
+                    const SizedBox(height: 10.0),
                     Column(
                       children: List.generate(
                         skillControllers.length,
@@ -74,25 +77,25 @@ class _UpdateInfoPageState extends State<UpdateInfoPage> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 10.0),
+                    const SizedBox(height: 10.0),
                     ElevatedButton(
                       onPressed: () {
                         setState(() {
                           skillControllers.add(TextEditingController());
                         });
                       },
-                      child: Text('Add Skill'),
+                      child: const Text('Add Skill'),
                     ),
-                    SizedBox(height: 20.0),
+                    const SizedBox(height: 20.0),
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => UpdateInfo1()),
+                              builder: (context) => const UpdateInfo1()),
                         ); // Handle updating information logic here
                       },
-                      child: Text('Update Information'),
+                      child: const Text('Update Information'),
                     ),
                   ],
                 ),
